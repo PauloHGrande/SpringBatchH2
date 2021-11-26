@@ -1,0 +1,9 @@
+package com.spring.batch.writer;
+
+import org.springframework.batch.item.ItemWriter;
+
+import com.spring.batch.model.User;
+
+public class DBWriter implements ItemWriter<User>{
+
+}

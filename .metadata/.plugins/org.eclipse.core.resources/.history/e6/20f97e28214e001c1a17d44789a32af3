@@ -1,0 +1,26 @@
+package com.spring.batch.config;
+
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.item.ItemProcessor;
+import org.springframework.batch.item.ItemReader;
+import org.springframework.batch.item.ItemWriter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.spring.batch.model.User;
+
+@Configuration
+@EnableBatchProcessing
+public class SpringBatchConfig {
+	
+	@Bean
+	public Job job(JobBuilderFactory jobBuilderFactory,
+				   StepBuilderFactory stepBuilderFactory,
+				   ItemReader<User> itemReader,
+				   ItemProcessor<User, User> itemProcessor,
+				   ItemWriter<User> itemWriter)
+
+}

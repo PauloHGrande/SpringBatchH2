@@ -1,0 +1,17 @@
+package com.spring.batch.processor;
+
+import java.util.Date;
+
+import org.springframework.batch.item.ItemProcessor;
+
+import com.spring.batch.model.User;
+
+public class Processor implements ItemProcessor<User, User>{
+
+	@Override
+	public User process(User user) throws Exception {
+		user.setTimestamp(new Date());
+		return user;
+	}
+
+}

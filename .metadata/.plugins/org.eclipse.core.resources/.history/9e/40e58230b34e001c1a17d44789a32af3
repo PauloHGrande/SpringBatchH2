@@ -1,0 +1,9 @@
+package com.spring.batch.processor;
+
+import org.springframework.batch.item.ItemProcessor;
+
+import com.spring.batch.model.User;
+
+public class Processor implements ItemProcessor<User, User>{
+
+}
